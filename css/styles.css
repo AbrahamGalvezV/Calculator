@@ -1,3 +1,9 @@
+:root {
+    --button-bg-color: rgba(225, 225, 225, 0.195);
+    --button-hover-color: rgba(225, 225, 225, 0.354);
+    --font-family: "Quicksand", serif;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,27 +11,28 @@
 }
 
 body {
-    background:url('./img/back1.jpg') center/cover no-repeat fixed;
+    background: url('/img/back1.jpg') center/cover no-repeat fixed;
     min-height: 100vh;
     background-color: rgb(3, 0, 39);
-    font-family: "Quicksand", serif;
+    font-family: var(--font-family);
     display: grid;
     place-items: center;
-
+    position: relative;
 }
+
 body:before {
     content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     z-index: -1;
     background-color: rgba(128, 24, 169, 0.145);
 }
 
 .calculator {
-    background-color:rgba(225, 225, 225, 0.195);
+    background-color: var(--button-bg-color);
     color: rgb(0, 0, 0);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -33,37 +40,43 @@ body:before {
     max-width: 100%;
     padding: 30px;
     border-radius: 30px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
 
 .screen {
     grid-column: 1 / -1;
-    background-color: rgba(225, 225, 225, 0.195);
+    background-color: var(--button-bg-color);
     padding: 20px;
     font-size: 40px;
     text-align: right;
     border-radius: 10px;
-    margin-top: 0px;
     font-family: monospace;
     font-weight: 600;
 }
 
 .btn {
-    background-color: rgba(225, 225, 225, 0.195);
-    color:  rgb(0, 0, 0);
+    background-color: var(--button-bg-color);
+    color: rgb(0, 0, 0);
     border: none;
     padding: 30px 10px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s;
 }
 
 .btn:hover {
-    background-color: rgba(225, 225, 225, 0.354);
+    background-color: var(--button-hover-color);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transition: 0.3s ease-in-out;
+}
+
+.btn:focus {
+    outline: 2px solid #000;
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
 
 #zero {
@@ -72,5 +85,5 @@ body:before {
 
 #equal {
     grid-row: span 2;
-    background-color: rgba(225, 225, 225, 0.354);
+    background-color: var(--button-hover-color);
 }

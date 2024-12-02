@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-    rel="stylesheet"/>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Calculator</title>
-</head>
-<body>
-<div class="calculator">
-    <div class="screen">0</div>
-    <button class="btn" id="c">C</button>
-    <button class="btn" id="delete">←</button>
-    <button class="btn">/</button>
-    <button class="btn">*</button>
-    <button class="btn">7</button>
-    <button class="btn">8</button>
-    <button class="btn">9</button>
-    <button class="btn">-</button>
-    <button class="btn">4</button>
-    <button class="btn">5</button>
-    <button class="btn">6</button>
-    <button class="btn">+</button>
-    <button class="btn">1</button>
-    <button class="btn">2</button>
-    <button class="btn">3</button>
-    <button class="btn" id="equal">=</button>
-    <button class="btn" id="zero">0</button>
-    <button class="btn">.</button>
-</div>
-
+  </head>
+  <body>
+    <div class="calculator" aria-label="Calculadora">
+      <div class="screen" role="textbox" aria-readonly="true">0</div>
+      <button class="btn" id="c" aria-label="Clear">C</button>
+      <button class="btn" id="delete" aria-label="Delete">←</button>
+      <button class="btn" aria-label="Divide">/</button>
+      <button class="btn" aria-label="Multiply">*</button>
+      <button class="btn" aria-label="7">7</button>
+      <button class="btn" aria-label="8">8</button>
+      <button class="btn" aria-label="9">9</button>
+      <button class="btn" aria-label="Subtract">-</button>
+      <button class="btn" aria-label="4">4</button>
+      <button class="btn" aria-label="5">5</button>
+      <button class="btn" aria-label="6">6</button>
+      <button class="btn" aria-label="Add">+</button>
+      <button class="btn" aria-label="1">1</button>
+      <button class="btn" aria-label="2">2</button>
+      <button class="btn" aria-label="3">3</button>
+      <button class="btn" id="equal" aria-label="Equal">=</button>
+      <button class="btn" id="zero" aria-label="0">0</button>
+      <button class="btn" aria-label="Decimal">.</button>
+    </div>
     <script src="./main/calculator.js"></script>
-</body>
+  </body>
 </html>
